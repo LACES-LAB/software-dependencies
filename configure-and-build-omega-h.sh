@@ -8,7 +8,7 @@ export NVCC_WRAPPER_DEFAULT_COMPILER=`which mpicxx`
 #git clone -b reducedThrust git@github.com:SCOREC/omega_h.git
 git clone git@github.com:SCOREC/omega_h.git
 cd omega_h
-git checkout d5489aac892895ad352ad9ce3926c5c98a4be791
+git checkout 8fc0a0bb3140e601cea86ebcbd2faecd30b410bf
 cd ..
 
 cmake -S $SOURCE_DIR/omega_h -B $BUILD_DIR/${DEVICE_ARCH}/omega_h \

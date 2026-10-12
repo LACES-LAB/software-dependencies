@@ -37,9 +37,10 @@ cmake -S $SOURCE_DIR/pcms -B $BUILD_DIR/${DEVICE_ARCH}/pcms \
   -DBUILD_TESTING=ON \
   -DPCMS_ENABLE_PETSC=ON \
   -DPETSC_ARCH="" \
+  -DPCMS_ENABLE_PETSC=ON \
   -DPETSC_DIR=$BUILD_DIR/${DEVICE_ARCH}/petsc/install \
   -DPCMS_ENABLE_SPDLOG=OFF \
-  -DPCMS_ENABLE_PYTHON=ON \
+  -DPCMS_ENABLE_Python=ON \
   -Dpybind11_ROOT=$BUILD_DIR/pybind11/install
 
 cmake --build $BUILD_DIR/${DEVICE_ARCH}/pcms/ -j8 --target install
