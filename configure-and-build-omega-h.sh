@@ -24,7 +24,9 @@ cmake -S $SOURCE_DIR/omega_h -B $BUILD_DIR/${DEVICE_ARCH}/omega_h \
   -DCMAKE_VERBOSE_MAKEFILE=ON \
   -DBUILD_SHARED_LIBS=ON \
   -DOmega_h_USE_pybind11=on \
-  -Dpybind11_ROOT=$BUILD_DIR/pybind11/install
+  -Dpybind11_ROOT=$BUILD_DIR/pybind11/install \
+  -DOmega_h_USE_SEACASExodus=ON \
+  -DSEACASExodus_PREFIX=$BUILD_DIR/seacas/install
 
 cmake --build $BUILD_DIR/${DEVICE_ARCH}/omega_h/ -j8 --target install
 cd $CURDIR
